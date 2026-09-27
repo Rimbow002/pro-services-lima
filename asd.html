@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Kit Corporativo - PROSERVICE</title>
+    <style>
+        :root {
+            --azul-marino: #0F2C59;
+            --dorado: #DA831A;
+            --fondo: #f4f6f9;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--fondo); color: #333; margin: 0; padding: 40px 20px; }
+        .container { max-width: 1000px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+        .header { text-align: center; margin-bottom: 40px; }
+        h1 { color: var(--azul-marino); border-bottom: 3px solid var(--dorado); display: inline-block; padding-bottom: 10px; margin-bottom: 5px; }
+        p.subtitle { color: #666; font-size: 16px; margin-top: 0; }
+        
+        .section-title { color: var(--azul-marino); margin-top: 40px; font-size: 22px; }
+        
+        /* Grid de Logos */
+        .logo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
+        .logo-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 30px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: space-between; }
+        .logo-wrapper { flex-grow: 1; display: flex; align-items: center; justify-content: center; width: 100%; min-height: 150px; background: url('data:image/svg+xml;utf8,<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><rect width="10" height="10" fill="%23e5e5e5"/><rect x="10" y="10" width="10" height="10" fill="%23e5e5e5"/></svg>'); /* Patrón de transparencia */ border-radius: 8px; margin-bottom: 20px; }
+        .logo-wrapper svg { max-width: 100%; height: auto; }
+        
+        /* Grid de Colores */
+        .color-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px; }
+        .color-card { border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #eee; }
+        .color-swatch { height: 120px; width: 100%; }
+        .bg-azul { background-color: var(--azul-marino); }
+        .bg-dorado { background-color: var(--dorado); }
+        .color-info { padding: 15px; text-align: center; background: white; }
+        .color-info strong { display: block; font-size: 18px; color: #333; }
+        .color-info span { color: #666; font-size: 14px; font-family: monospace; }
+
+        /* Botones */
+        .btn-copy { background: var(--azul-marino); color: white; border: none; padding: 12px 24px; border-radius: 6px; font-weight: bold; cursor: pointer; transition: 0.3s; width: 100%; }
+        .btn-copy:hover { background: var(--dorado); }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Brand Kit de la Empresa</h1>
+            <p class="subtitle">Identidad Corporativa Vectorial (SVG) y Paleta de Colores</p>
+        </div>
+
+        <h2 class="section-title">1. Logotipos Corporativos (Transparentes)</h2>
+        <div class="logo-grid">
+            
+            <!-- Logo Completo -->
+            <div class="logo-card">
+                <h3>Logo Completo (Horizontal)</h3>
+                <div class="logo-wrapper">
+                    <svg id="svg-completo" viewBox="0 0 650 180" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Símbolo -->
+                        <g transform="translate(10, 15)">
+                            <!-- Edificios -->
+                            <rect x="20" y="50" width="25" height="90" fill="#0F2C59"/>
+                            <rect x="55" y="20" width="30" height="120" fill="#DA831A"/>
+                            <rect x="95" y="60" width="25" height="80" fill="#0F2C59"/>
+                            <!-- Techo -->
+                            <polygon points="10,50 50,10 95,50 85,60 50,25 20,60" fill="#0F2C59"/>
+                            <!-- Engranaje -->
+                            <path d="M 105 20 A 70 70 0 0 1 105 140" fill="none" stroke="#0F2C59" stroke-width="15" stroke-dasharray="18 12"/>
+                            <!-- Engranaje Interior -->
+                            <path d="M 105 38 A 52 52 0 0 1 105 122" fill="none" stroke="#DA831A" stroke-width="5"/>
+                            <!-- Ventanas -->
+                            <rect x="62" y="35" width="6" height="10" fill="#ffffff"/>
+                            <rect x="72" y="35" width="6" height="10" fill="#ffffff"/>
+                            <rect x="62" y="50" width="6" height="10" fill="#ffffff"/>
+                            <rect x="72" y="50" width="6" height="10" fill="#ffffff"/>
+                            <!-- Destellos / Estrellas -->
+                            <path d="M 140 30 Q 150 30 150 20 Q 150 30 160 30 Q 150 30 150 40 Q 150 30 140 30" fill="#DA831A"/>
+                            <path d="M 165 50 Q 170 50 170 45 Q 170 50 175 50 Q 170 50 170 55 Q 170 50 165 50" fill="#DA831A"/>
+                        </g>
+                        <!-- Texto Principal -->
+                        <text x="195" y="95" font-family="'Arial Black', Impact, sans-serif" font-weight="900" font-size="70" fill="#DA831A">PRO</text>
+                        <text x="365" y="95" font-family="'Arial Black', Impact, sans-serif" font-weight="900" font-size="70" fill="#0F2C59">SERVICE</text>
+                        <!-- Separador -->
+                        <line x1="200" y1="110" x2="630" y2="110" stroke="#0F2C59" stroke-width="2"/>
+                        <!-- Subtítulo -->
+                        <text x="200" y="135" font-family="Arial, sans-serif" font-weight="bold" font-size="12" fill="#0F2C59" letter-spacing="1.5">MANTENIMIENTO Y SERVICIOS INTEGRALES S.A.C.</text>
+                    </svg>
+                </div>
+                <button class="btn-copy" onclick="copySVG('svg-completo')">Copiar Código SVG</button>
+            </div>
+
+            <!-- Solo Símbolo (Isotipo) -->
+            <div class="logo-card">
+                <h3>Símbolo (Isotipo)</h3>
+                <div class="logo-wrapper">
+                    <svg id="svg-simbolo" viewBox="0 0 190 180" xmlns="http://www.w3.org/2000/svg">
+                        <g transform="translate(10, 15)">
+                            <rect x="20" y="50" width="25" height="90" fill="#0F2C59"/>
+                            <rect x="55" y="20" width="30" height="120" fill="#DA831A"/>
+                            <rect x="95" y="60" width="25" height="80" fill="#0F2C59"/>
+                            <polygon points="10,50 50,10 95,50 85,60 50,25 20,60" fill="#0F2C59"/>
+                            <path d="M 105 20 A 70 70 0 0 1 105 140" fill="none" stroke="#0F2C59" stroke-width="15" stroke-dasharray="18 12"/>
+                            <path d="M 105 38 A 52 52 0 0 1 105 122" fill="none" stroke="#DA831A" stroke-width="5"/>
+                            <rect x="62" y="35" width="6" height="10" fill="#ffffff"/>
+                            <rect x="72" y="35" width="6" height="10" fill="#ffffff"/>
+                            <rect x="62" y="50" width="6" height="10" fill="#ffffff"/>
+                            <rect x="72" y="50" width="6" height="10" fill="#ffffff"/>
+                            <path d="M 140 30 Q 150 30 150 20 Q 150 30 160 30 Q 150 30 150 40 Q 150 30 140 30" fill="#DA831A"/>
+                            <path d="M 165 50 Q 170 50 170 45 Q 170 50 175 50 Q 170 50 170 55 Q 170 50 165 50" fill="#DA831A"/>
+                        </g>
+                    </svg>
+                </div>
+                <button class="btn-copy" onclick="copySVG('svg-simbolo')">Copiar Código SVG</button>
+            </div>
+
+            <!-- Solo Texto -->
+            <div class="logo-card">
+                <h3>Texto Corporativo</h3>
+                <div class="logo-wrapper">
+                    <svg id="svg-texto" viewBox="190 0 450 180" xmlns="http://www.w3.org/2000/svg">
+                        <text x="195" y="95" font-family="'Arial Black', Impact, sans-serif" font-weight="900" font-size="70" fill="#DA831A">PRO</text>
+                        <text x="365" y="95" font-family="'Arial Black', Impact, sans-serif" font-weight="900" font-size="70" fill="#0F2C59">SERVICE</text>
+                        <line x1="200" y1="110" x2="630" y2="110" stroke="#0F2C59" stroke-width="2"/>
+                        <text x="200" y="135" font-family="Arial, sans-serif" font-weight="bold" font-size="12" fill="#0F2C59" letter-spacing="1.5">MANTENIMIENTO Y SERVICIOS INTEGRALES S.A.C.</text>
+                    </svg>
+                </div>
+                <button class="btn-copy" onclick="copySVG('svg-texto')">Copiar Código SVG</button>
+            </div>
+
+        </div>
+
+        <h2 class="section-title">2. Paleta de Colores Corporativos</h2>
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-swatch bg-azul"></div>
+                <div class="color-info">
+                    <strong>Azul Marino Institucional</strong>
+                    <span>HEX: #0F2C59</span><br>
+                    <span>RGB: 15, 44, 89</span>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch bg-dorado"></div>
+                <div class="color-info">
+                    <strong>Dorado Industrial</strong>
+                    <span>HEX: #DA831A</span><br>
+                    <span>RGB: 218, 131, 26</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copySVG(id) {
+            const svgElement = document.getElementById(id);
+            const svgText = svgElement.outerHTML;
+            navigator.clipboard.writeText(svgText).then(() => {
+                alert("¡Código SVG copiado con éxito!\n\nPuedes pegarlo directamente dentro de tu código HTML del Dossier o página web.");
+            }).catch(err => {
+                alert("Error al copiar: " + err);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Services | Dossier Corporativo</title>
+    <!-- Favicon -->
+    <link rel="icon" href="logo.png" type="image/png">
+    
+    <!-- Google Fonts: Montserrat for a premium modern corporate look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Montserrat', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                blue: '#0F2C59',
+                gold: '#DA831A',
+                light: '#f8fafc',
+                dark: '#0a192f',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-brand-light font-sans text-gray-800 antialiased selection:bg-brand-gold selection:text-white">
+
+    <!-- Navbar Limpio y Profesional -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-24 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <!-- NUEVO LOGO: Minimalista, Elegante y sin cuadros de fondo -->
+                    <svg viewBox="0 0 350 80" xmlns="http://www.w3.org/2000/svg" class="h-12 md:h-16">
+                        <!-- Icono Geométrico (Edificios/Estructura) -->
+                        <g transform="translate(0, 10)">
+                            <path d="M 15 65 L 15 25 L 35 5 L 55 25 L 55 65 Z" fill="#0F2C59"/>
+                            <path d="M 45 65 L 45 40 L 60 25 L 75 40 L 75 65 Z" fill="#DA831A"/>
+                            <path d="M 0 65 L 0 50 L 7.5 42 L 15 50" fill="none" stroke="#DA831A" stroke-width="4"/>
+                        </g>
+                        <!-- Texto -->
+                        <text x="95" y="45" font-family="'Montserrat', sans-serif" font-weight="900" font-size="38" fill="#0F2C59" letter-spacing="-1">PRO<tspan fill="#DA831A">SERVICE</tspan></text>
+                        <text x="98" y="65" font-family="'Montserrat', sans-serif" font-weight="600" font-size="10.5" fill="#64748b" letter-spacing="3.5">MANTENIMIENTO INTEGRAL</text>
+                    </svg>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#nosotros" class="text-sm font-semibold text-gray-600 hover:text-brand-gold transition-colors">Nosotros</a>
+                    <a href="#servicios" class="text-sm font-semibold text-gray-600 hover:text-brand-gold transition-colors">Servicios</a>
+                    <a href="#portafolio" class="text-sm font-semibold text-gray-600 hover:text-brand-gold transition-colors">Portafolio</a>
+                    <a href="#contacto" class="px-6 py-2.5 bg-brand-blue text-white text-sm font-semibold rounded hover:bg-brand-gold transition-all duration-300 shadow-md">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section Immersivo -->
+    <header class="relative h-[80vh] min-h-[600px] flex items-center">
+        <!-- Imagen de fondo con overlay elegante -->
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Mantenimiento Industrial" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-brand-dark/80 mix-blend-multiply"></div>
+            <!-- Gradiente para suavizar la transición -->
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-light via-transparent to-transparent opacity-90"></div>
+        </div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="max-w-3xl">
+                <span class="block text-brand-gold font-bold tracking-widest text-sm uppercase mb-3">Eficiencia & Calidad</span>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
+                    Soluciones <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-yellow-300">Integrales</span> para su Empresa.
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-10 font-light leading-relaxed">
+                    Centralizamos todas sus necesidades de mantenimiento corporativo, reparación e infraestructura en un proveedor de confianza. Excelencia comprobada en Lima, Perú.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contacto" class="px-8 py-4 bg-brand-gold text-white text-center font-bold rounded hover:bg-yellow-600 transition-all duration-300 shadow-lg hover:shadow-brand-gold/50">
+                        Solicitar Cotización
+                    </a>
+                    <a href="#portafolio" class="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/30 text-white text-center font-bold rounded hover:bg-white/20 transition-all duration-300">
+                        Ver Proyectos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Acerca de Nosotros (Layout 2 columnas) -->
+    <section id="nosotros" class="py-24 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-brand-blue mb-6">Un Aliado Estratégico a su Medida</h2>
+                    <div class="w-20 h-1 bg-brand-gold mb-8"></div>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        En <strong>Pro Services</strong>, entendemos que el mantenimiento óptimo de sus instalaciones no es solo un gasto, sino una inversión directa en la productividad y la imagen de su corporación.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                        Nos diferenciamos por ofrecer un servicio integral. Ya no necesita coordinar con múltiples proveedores; nosotros nos encargamos desde la estructura pesada hasta los acabados más finos, garantizando tiempos de respuesta rápidos y acabados de nivel premium.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="border-l-4 border-brand-gold pl-4">
+                            <h4 class="text-2xl font-bold text-brand-blue">10+</h4>
+                            <p class="text-sm text-gray-500 font-semibold uppercase tracking-wider">Años de Experiencia</p>
+                        </div>
+                        <div class="border-l-4 border-brand-blue pl-4">
+                            <h4 class="text-2xl font-bold text-brand-blue">100%</h4>
+                            <p class="text-sm text-gray-500 font-semibold uppercase tracking-wider">Garantía de Calidad</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Profesionales trabajando" class="rounded-lg shadow-2xl">
+                    <div class="absolute -bottom-6 -left-6 bg-brand-blue p-6 rounded-lg shadow-xl hidden sm:block">
+                        <p class="text-white font-bold text-lg flex items-center">
+                            <i class="fas fa-shield-alt text-brand-gold text-2xl mr-3"></i> Proveedor Certificado
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Áreas de Especialización -->
+    <section id="servicios" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-gold font-bold tracking-widest text-sm uppercase">Nuestras Soluciones</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-brand-blue mt-2 mb-4">Áreas de Especialización</h2>
+                <p class="text-gray-500 text-lg">Cobertura técnica 360° para mantener su infraestructura en perfectas condiciones operativas.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Card 1 -->
+                <div class="group p-8 rounded-xl bg-brand-light border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-14 h-14 bg-brand-blue/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-blue transition-colors duration-300">
+                        <i class="fas fa-hammer text-2xl text-brand-blue group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-blue mb-4">Infraestructura y Acabados</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start"><i class="fas fa-check text-brand-gold mt-1 mr-3 text-sm"></i> <span>Diseño e instalación de Drywall.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-brand-gold mt-1 mr-3 text-sm"></i> <span>Carpintería corporativa en Melamina.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-brand-gold mt-1 mr-3 text-sm"></i> <span>Pintura premium (interiores/exteriores).</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-brand-gold mt-1 mr-3 text-sm"></i> <span>Acabados: Losetas, arenado, puertas y ventanas.</span></li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group p-8 rounded-xl bg-brand-light border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-14 h-14 bg-brand-blue/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-blue transition-colors duration-300">
+                        <i class="fas fa-bolt text-2xl text-brand-blue group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-blue mb-4">Instalaciones Técnicas</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start"><i class="fas fa-check text-brand-gold mt-1 mr-3 text-sm"></i> <span>Electricidad comercial e industrial.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-brand-gold mt-1 mr-3 text-sm"></i> <span>Gasfitería técnica avanzada.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-brand-gold mt-1 mr-3 text-sm"></i> <span>Mantenimiento de tuberías y redes.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-brand-gold mt-1 mr-3 text-sm"></i> <span>Prevención y reparación de fallos.</span></li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group p-8 rounded-xl bg-brand-light border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-14 h-14 bg-brand-blue/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-blue transition-colors duration-300">
+                        <i class="fas fa-sparkles text-2xl text-brand-blue group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-blue mb-4">Restauración y Tratamientos Finos</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start"><i class="fas fa-crown text-brand-gold mt-1 mr-3 text-sm"></i> <span class="font-semibold text-brand-blue">Restauración y limpieza de candelabros de bronce.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-brand-gold mt-1 mr-3 text-sm"></i> <span>Lavado industrial de cortinas y alfombras.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-brand-gold mt-1 mr-3 text-sm"></i> <span>Acondicionamiento y limpieza profunda post-obra.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portafolio Ejecutivo -->
+    <section id="portafolio" class="py-24 bg-brand-blue text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-white/20 pb-6">
+                <div class="max-w-2xl">
+                    <span class="text-brand-gold font-bold tracking-widest text-sm uppercase">Experiencia Comprobada</span>
+                    <h2 class="text-3xl md:text-5xl font-extrabold mt-2">Casos de Éxito</h2>
+                </div>
+                <p class="text-gray-300 md:text-right mt-4 md:mt-0 max-w-sm">Nuestro nivel de detalle, documentado en nuestros proyectos más exigentes.</p>
+            </div>
+            
+            <!-- Proyecto 1: Congreso -->
+            <div class="mb-20">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 rounded-full bg-brand-gold flex items-center justify-center mr-4">
+                        <i class="fas fa-building text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold">Congreso de la República</h3>
+                        <p class="text-brand-gold text-sm font-semibold uppercase tracking-wide">Mantenimiento de Barandas de Bronce (Pleno de Diputados)</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="relative rounded-lg overflow-hidden group aspect-[4/3] bg-brand-dark">
+                        <img src="TRABAJOS/Destacados/Pleno de diputados congreso República - barandas de bronce/DIPUTADO_1.jpg" alt="Congreso Foto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="relative rounded-lg overflow-hidden group aspect-[4/3] bg-brand-dark">
+                        <img src="TRABAJOS/Destacados/Pleno de diputados congreso República - barandas de bronce/DIPUTADO_2.jpg" alt="Congreso Foto 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="relative rounded-lg overflow-hidden group aspect-[4/3] bg-brand-dark">
+                        <img src="TRABAJOS/Destacados/Pleno de diputados congreso República - barandas de bronce/DIPUTADO_3.jpg" alt="Congreso Foto 3" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 2: Luren -->
+            <div class="mb-20">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 rounded-full bg-brand-gold flex items-center justify-center mr-4">
+                        <i class="fas fa-church text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold">Iglesia Señor de Luren (ICA)</h3>
+                        <p class="text-brand-gold text-sm font-semibold uppercase tracking-wide">Limpieza Especializada de Arañas de Cristal</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="relative rounded-lg overflow-hidden group aspect-[4/3] bg-brand-dark">
+                        <img src="TRABAJOS/Destacados/Iglesia señor de Luren (ICA) - Mantenimiento de arañas de cristal/Untitled.jpg" alt="Araña Luren 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100">
+                    </div>
+                    <div class="relative rounded-lg overflow-hidden group aspect-[4/3] bg-brand-dark">
+                        <img src="TRABAJOS/Destacados/Iglesia señor de Luren (ICA) - Mantenimiento de arañas de cristal/Untitled2A.jpg" alt="Araña Luren 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100">
+                    </div>
+                    <div class="relative rounded-lg overflow-hidden group aspect-[4/3] bg-brand-dark">
+                        <img src="TRABAJOS/Destacados/Iglesia señor de Luren (ICA) - Mantenimiento de arañas de cristal/22.jpg" alt="Araña Luren 3" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 3: Gasfitería -->
+            <div>
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 rounded-full bg-brand-gold flex items-center justify-center mr-4">
+                        <i class="fas fa-wrench text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold">Trabajos Técnicos Generales</h3>
+                        <p class="text-brand-gold text-sm font-semibold uppercase tracking-wide">Gasfitería e Instalaciones Hidráulicas</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="relative rounded-lg overflow-hidden group aspect-[4/3] bg-brand-dark">
+                        <img src="TRABAJOS/GENERAL/Gasfitería/sadasdasdsa.jpg" alt="Gasfitería 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100">
+                    </div>
+                    <div class="relative rounded-lg overflow-hidden group aspect-[4/3] bg-brand-dark">
+                        <img src="TRABAJOS/GENERAL/Gasfitería/Untitled.jpg" alt="Gasfitería 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100">
+                    </div>
+                    <div class="relative rounded-lg overflow-hidden group aspect-[4/3] bg-brand-dark">
+                        <img src="TRABAJOS/GENERAL/Gasfitería/Untitledasdasdas.jpg" alt="Gasfitería 3" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 4: Muebles -->
+            <div class="mt-20">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 rounded-full bg-brand-gold flex items-center justify-center mr-4">
+                        <i class="fas fa-couch text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold">Trabajos Técnicos Generales</h3>
+                        <p class="text-brand-gold text-sm font-semibold uppercase tracking-wide">Diseño, Fabricación e Instalación de Muebles</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="relative rounded-lg overflow-hidden group aspect-[4/3] bg-brand-dark">
+                        <img src="TRABAJOS/GENERAL/diseño, fabricación e instalación de muebles/muebles1.jpg" alt="Muebles 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100">
+                    </div>
+                    <div class="relative rounded-lg overflow-hidden group aspect-[4/3] bg-brand-dark">
+                        <img src="TRABAJOS/GENERAL/diseño, fabricación e instalación de muebles/muebles2.jpg" alt="Muebles 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 5: Pintura Estuco -->
+            <div class="mt-20">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 rounded-full bg-brand-gold flex items-center justify-center mr-4">
+                        <i class="fas fa-paint-roller text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold">Trabajos Técnicos Generales</h3>
+                        <p class="text-brand-gold text-sm font-semibold uppercase tracking-wide">Pintura Técnica y Estuco</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="relative rounded-lg overflow-hidden group aspect-[4/3] bg-brand-dark">
+                        <img src="TRABAJOS/GENERAL/Pintura tecnica estuco/estuco1.jpg" alt="Pintura Estuco 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100">
+                    </div>
+                    <div class="relative rounded-lg overflow-hidden group aspect-[4/3] bg-brand-dark">
+                        <img src="TRABAJOS/GENERAL/Pintura tecnica estuco/estuco2.jpg" alt="Pintura Estuco 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 group-hover:opacity-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Footer -->
+    <footer id="contacto" class="bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="bg-brand-blue rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
+                <!-- Info Section -->
+                <div class="p-12 md:w-1/2 flex flex-col justify-center relative overflow-hidden">
+                    <div class="absolute -right-20 -top-20 w-64 h-64 bg-brand-gold rounded-full opacity-10 blur-3xl"></div>
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-white mb-4 relative z-10">Optimice hoy el mantenimiento de su empresa</h3>
+                    <p class="text-blue-200 text-lg mb-10 relative z-10">Contacte con nuestro equipo técnico para una visita de evaluación o solicite nuestra presentación comercial.</p>
+                    
+                    <div class="space-y-6 relative z-10">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mr-4 border border-white/20">
+                                <i class="fab fa-whatsapp text-brand-gold text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-blue-200">Atención Directa</p>
+                                <p class="text-xl font-bold text-white">+51 997 360 521</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mr-4 border border-white/20">
+                                <i class="fas fa-map-marker-alt text-brand-gold text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-blue-200">Sede Central</p>
+                                <p class="text-xl font-bold text-white">Lima, Perú</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Action Section -->
+                <div class="bg-brand-light p-12 md:w-1/2 flex items-center justify-center">
+                    <div class="w-full max-w-md text-center">
+                        <div class="mb-8">
+                            <i class="fab fa-whatsapp text-6xl text-green-500 mb-4 drop-shadow-md"></i>
+                            <h4 class="text-2xl font-bold text-brand-blue">Respuesta Inmediata</h4>
+                            <p class="text-gray-500 mt-2">Haga clic abajo para iniciar una conversación segura por WhatsApp con nuestro equipo comercial.</p>
+                        </div>
+                        <a href="https://wa.me/51997360521?text=Hola%20Pro%20Services,%20me%20gustaría%20solicitar%20información%20sobre%20sus%20servicios%20de%20mantenimiento%20general." target="_blank" class="block w-full py-4 px-6 bg-green-500 hover:bg-green-600 text-white text-lg font-bold rounded-lg shadow-lg hover:shadow-green-500/50 transition-all duration-300 transform hover:-translate-y-1">
+                            Contactar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                <p>&copy; 2026 Pro Services. Mantenimiento y Servicios Integrales S.A.C.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-brand-blue transition">Política de Privacidad</a>
+                    <a href="#" class="hover:text-brand-blue transition">Términos de Servicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
